@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* background: rgb(1, 1, 25); */
+    color: aliceblue;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: azure;
+    margin-left: -10%;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    animation: showRight 1s, ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: azure;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.main {
+    color: cornflowerblue;
+}
+
+#bor {
+    all: unset;
+    cursor: pointer;
+    margin-left: -100%;
+    transition: .5s ease-out;
+
+    display: none;
+}
+
+#btn:hover {
+    transform: rotate(180deg);
+    color: var(--cornflowerblue);
+}
+
+
+.home {
+    height: 100vh;
+    background: url('bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0, 10%;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.content h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: 700;
+    color: skyblue;
+}
+
+
+.content p {
+    font-size: 16px;
+    margin: 20px, 0, 40px;
+}
+
+.content .btn-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 90%;
+    background: cornflowerblue;
+    border: 2px solid skyblue;
+    border-radius: 8px;
+    font-size: 19px;
+    color: rgba(6, 6, 6, 0.954);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: cornflowerblue;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: skyblue;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: rgba(6, 6, 6, 0.954);
+}
+
+.btn-box a:nth-child(2)::before {
+    background: cornflowerblue;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(1, 1, 25);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+
+}
+
+.addons {
+    position: absolute;
+    bottom: 0px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addons a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid skyblue;
+    border-radius: 50%;
+    font-size: 20px;
+    color: skyblue;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.addons a:hover {
+    color: rgba(6, 6, 6, 0.954);
+}
+
+.addons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: cornflowerblue;
+    z-index: -1;
+    transition: .5s;
+}
+
+.addons a:hover::before {
+    width: 100%;
+}
+
+@media only screen and (min-width: 550px) {
+    .content {
+        width: 100%;
+    }
+
+    .content h1 {
+        width: 100%;
+    }
+
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+.about {
+    width: 100%;
+    padding: 100px 0px;
+    background: rgba(0, 7, 7, 0.954);
+}
+
+.about img {
+    height: auto;
+    width: 430px;
+}
+
+.about-txt {
+    width: 550px;
+
+}
+
+.main-ab {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0, auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-txt h2 {
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-txt h5 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-txt p {
+    color: skyblue;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button {
+    background: rgb(95, 158, 160);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover {
+    background: cornflowerblue;
+    border: 2px solid rgba(6, 6, 6, 0.954);
+    cursor: pointer;
+}
+
+.Skills {
+    background: rgba(1, 4, 7, 0.954);
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.title h2 {
+    color: white;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.card {
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: rgba(6, 6, 6, 0.954);
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card h5 {
+    color: cornflowerblue;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.pro p {
+    color: azure;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+
+.card .button {
+    background: rgba(7, 9, 70, 0.954);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.card .button:hover {
+    background: cornflowerblue;
+    border: 2px solid rgba(6, 6, 6, 0.954);
+    cursor: pointer;
+}
+
+.contact {
+    width: 100%;
+    height: 290px;
+    background: rgba(0, 7, 7, 0.954);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact p {
+    color: azure;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.contact .but {
+    background: rgba(1, 0, 11, 0.954);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.contact .but:hover {
+    background: cornflowerblue;
+    border: 2px solid rgba(6, 6, 6, 0.954);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 679px) and (min-width: 550px) {
+    .main-ab img {
+        display: none;
+    }
+
+    .title h2 {
+        width: 100%;
+    }
+
+    .box {
+        display: grid;
+        gap: 1rem;
+    }
+
+}
